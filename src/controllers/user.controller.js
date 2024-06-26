@@ -31,6 +31,7 @@ const create = async (req, res) => {
 };
 
 const findAll = async (req, res) => {
+    console.log("Estou aqui em user")
     try {
         const users = await userService.findAllService();
 

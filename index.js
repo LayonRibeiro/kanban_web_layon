@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 
 import userRoute from './src/routes/user.route.js';
 import authRoute from './src/routes/auth.route.js';
+import kanbanRoute from './src/routes/kanban.route.js';
 
 
 dotenv.config();
@@ -15,6 +16,7 @@ connectDataBase();
 app.use(express.json()); // mandar dados json para nossa api
 app.use("/user", userRoute);
 app.use("/auth", authRoute);
+app.use("/kanban", kanbanRoute);
 
 
 app.listen(port, () => console.log(`Servidor Rodando na porta ${port}`))
